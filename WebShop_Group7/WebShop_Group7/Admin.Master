@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="WebShop_Group7.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="WebShop_Group7.Adm" %>
 
 <!DOCTYPE html>
 
@@ -6,13 +6,11 @@
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-        <script src="Scripts/bootstrap.js"></script>
-        <script src="Scripts/jquery-1.10.2.js"></script>
-        <link href="Content/bootstrap.css" rel="stylesheet" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        Hello
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         

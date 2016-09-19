@@ -170,12 +170,12 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Admin\index.aspx" />
     <Content Include="Admin\Admin_StartPage.aspx" />
     <Content Include="Admin\Edit_Order.aspx" />
     <Content Include="Admin\Edit_Product.aspx" />
     <Content Include="Admin\Edit_StartPage.aspx" />
     <Content Include="Admin\Edit_User.aspx" />
+    <Content Include="Admin\index.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -362,13 +362,6 @@
     <Compile Include="Admins.Master.designer.cs">
       <DependentUpon>Admins.Master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\Admin_StartPage.aspx.cs">
       <DependentUpon>Admin_StartPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,6 +396,13 @@
     </Compile>
     <Compile Include="Admin\Edit_User.aspx.designer.cs">
       <DependentUpon>Edit_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
