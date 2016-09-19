@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebShop_Group7
 {
-    public partial class Adm : System.Web.UI.MasterPage
+    public partial class Admins : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

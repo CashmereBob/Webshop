@@ -10,6 +10,6 @@
 namespace WebShop_Group7.Admin {
     
     
-    public partial class Admin_LoginPage {
+    public partial class index {
     }
 }
