@@ -13,5 +13,15 @@ namespace WebShop_Group7.Admin
         {
 
         }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Admin/List_Order.aspx");
+        }
     }
 }
