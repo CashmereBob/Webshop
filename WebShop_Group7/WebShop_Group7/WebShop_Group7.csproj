@@ -176,7 +176,12 @@
     <Content Include="Admin\Edit_Product.aspx" />
     <Content Include="Admin\Edit_StartPage.aspx" />
     <Content Include="Admin\Edit_User.aspx" />
+    <Content Include="Admin\List_Carrier.aspx" />
     <Content Include="Admin\List_Order.aspx" />
+    <Content Include="Admin\List_Pages.aspx" />
+    <Content Include="Admin\List_Payment.aspx" />
+    <Content Include="Admin\List_Products.aspx" />
+    <Content Include="Admin\List_Users.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -397,12 +402,47 @@
     <Compile Include="Admin\Edit_User.aspx.designer.cs">
       <DependentUpon>Edit_User.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\List_Carrier.aspx.cs">
+      <DependentUpon>List_Carrier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\List_Carrier.aspx.designer.cs">
+      <DependentUpon>List_Carrier.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\List_Order.aspx.cs">
       <DependentUpon>List_Order.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\List_Order.aspx.designer.cs">
       <DependentUpon>List_Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\List_Pages.aspx.cs">
+      <DependentUpon>List_Pages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\List_Pages.aspx.designer.cs">
+      <DependentUpon>List_Pages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\List_Payment.aspx.cs">
+      <DependentUpon>List_Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\List_Payment.aspx.designer.cs">
+      <DependentUpon>List_Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\List_Products.aspx.cs">
+      <DependentUpon>List_Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\List_Products.aspx.designer.cs">
+      <DependentUpon>List_Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\List_Users.aspx.cs">
+      <DependentUpon>List_Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\List_Users.aspx.designer.cs">
+      <DependentUpon>List_Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

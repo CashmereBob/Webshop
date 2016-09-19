@@ -10,6 +10,6 @@
 namespace WebShop_Group7.Admin {
     
     
-    public partial class List_Order {
+    public partial class List_Payment {
     }
 }
