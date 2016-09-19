@@ -1,16 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Edit_Order.aspx.cs" Inherits="WebShop_Group7.Admin.Edit_Order" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Edit_Order.aspx.cs" Inherits="WebShop_Group7.Admin.Edit_Order" %>
 
-<!DOCTYPE html>
+ <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>

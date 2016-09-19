@@ -170,7 +170,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="Admin\Admin_LoginPage.aspx" />
+    <Content Include="Admin\index.aspx" />
     <Content Include="Admin\Admin_StartPage.aspx" />
     <Content Include="Admin\Edit_Order.aspx" />
     <Content Include="Admin\Edit_Product.aspx" />
@@ -354,12 +354,12 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Admin_LoginPage.aspx.cs">
-      <DependentUpon>Admin_LoginPage.aspx</DependentUpon>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Admin_LoginPage.aspx.designer.cs">
-      <DependentUpon>Admin_LoginPage.aspx</DependentUpon>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin_StartPage.aspx.cs">
       <DependentUpon>Admin_StartPage.aspx</DependentUpon>
