@@ -17,8 +17,7 @@
 
 </head>
 <body>
-    <form runat="server">
-        <h1>Admin LoginPage</h1>
+    <form runat="server">     
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
