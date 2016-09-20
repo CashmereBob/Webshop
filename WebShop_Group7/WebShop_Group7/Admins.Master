@@ -14,14 +14,13 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <script src="Scripts/JavaScript.js"></script>
 </head>
 <body>
     <form runat="server">   
         <%-- Gömda fält för att lagra informationen i local och session storrage, detta för att C# ska kunna få tillgång till värdena vilket det inte kan om det ligger direkt i Session eller local storrage --%>
-        <input id="User" type="hidden" value="" name="usr" runat="server"> 
-        <input id="Password" type="hidden" value="" name="password" runat="server">
-        <input id="Cart" type="hidden" value="" name="cart" runat="server">
+        <input id="User" type="hidden" value="." name="usr" runat="server"> 
+        <input id="Password" type="hidden" value="." name="password" runat="server">
+        <input id="Cart" type="hidden" value="." name="cart" runat="server">
 
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -38,7 +37,7 @@
                 <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
                 <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />             
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <%--Site Scripts--%>
             </Scripts>
@@ -90,6 +89,8 @@
             </footer>
         </div>
     </form>
+
 </body>
+<script src="../Scripts/JavaScript.js"></script>
 </html>
 

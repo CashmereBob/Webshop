@@ -1,9 +1,5 @@
-﻿$(document).ready();{
-    $('User:hidden').val(sessionStorage.key('User'));
-    $('Password:hidden').val(sessionStorage.key('Password'));
-}
-
-function Login() {
-    sessionStorage.setItem('User', $('#TextBox_AdminUserName').val());
-    sessionStorage.setItem('Password', $('#TextBox_AdminPassword').val());
-}
+﻿
+$(document).ready(function () {
+    $('#User').val(sessionStorage.getItem('User'));
+        $('#Password').val(sessionStorage.getItem('Password'));
+    });
