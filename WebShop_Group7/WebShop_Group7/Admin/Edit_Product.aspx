@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-5">
                 <asp:Label ID="Label_ImgURL" runat="server" Text="Label">URL:</asp:Label>
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"></asp:TextBox>
             </div>
            
         </div>
