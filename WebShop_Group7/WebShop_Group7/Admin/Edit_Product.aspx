@@ -6,8 +6,20 @@
 
         <div class="row">
             <%-- IMG --%>
-            <div class="col-md-2">
+            <div class="col-md-6">
                 <asp:Image ID="Image1" runat="server" />Img
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <asp:Label ID="Label_ImgURL" runat="server" Text="Label">URL:</asp:Label>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </div>
+           
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_NewProductIMG" runat="server" Text="Upload" />
             </div>
         </div>
         <div class="row">
@@ -100,30 +112,30 @@
          en fin fin sak som alla borde ha. Produkten är en fin fin sak som alla borde ha. </textarea>
             </div>
         </div>
-    </div>
+        </div>
     <%-- Egenskaper --%>
-    <div class="row">
-        <h3>Egenskaper</h3>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <h4>Lägg till egenskap</h4>
+        <div class="row">
+            <h3>Egenskaper</h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-2">
-            <asp:TextBox CssClass="form-control" ID="TextBox_AttributeCategory"  runat="server"></asp:TextBox>
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Lägg till egenskap</h4>
+            </div>
         </div>
-        <div class="col-md-2">
-            <asp:DropDownList CssClass="form-control" ID="DropDownList_Atribute" runat="server"></asp:DropDownList>
-        </div>
-        <div class="col-md-2">
-            <asp:Button Cssclass="btn btn-default" Csstype="button"  ID="Button_AddAttribute" runat="server" Text="Läggtill" />
+        <div class="row">
+            <div class="col-md-2">
+                <asp:TextBox CssClass="form-control" ID="TextBox_AttributeCategory" runat="server"></asp:TextBox>
+            </div>
+            <div class="col-md-2">
+                <asp:DropDownList CssClass="form-control" ID="DropDownList_Atribute" runat="server"></asp:DropDownList>
+            </div>
+            <div class="col-md-2">
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_AddAttribute" runat="server" Text="Läggtill" />
 
+            </div>
         </div>
-    </div>
-    <%-- Egenskap1 --%>
-  
+        <%-- Egenskap1 --%>
+
         <div class="row">
 
             <div class="col-md-2">
@@ -135,46 +147,46 @@
                 <asp:Label ID="Label_Attribute1" runat="server" Text="Large"></asp:Label>
             </div>
             <div class="col-md-2">
-                <asp:Button Cssclass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute1" runat="server" Text="Remove" />
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute1" runat="server" Text="Remove" />
             </div>
         </div>
-   
-    <%-- Egenskap2 --%>
-    <div class="row">
-        <div class="col-md-2">
-            <h4>Egenskap två</h4>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-2">
-            <asp:Label ID="Label_Attribute2" runat="server" Text="">Röd</asp:Label>
+        <%-- Egenskap2 --%>
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Egenskap två</h4>
+            </div>
         </div>
-        <div class="col-md-2">
-            <asp:Button Cssclass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute2" runat="server" Text="Remove" />
-        </div>
-    </div>
-    <%-- Egenskap3 --%>
-    <div class="row">
-        <div class="col-md-2">
-            <h4>Egenskap tre</h4>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-2">
-            <asp:Label ID="Label_Attribute3" runat="server" Text="">Tröja</asp:Label>
+        <div class="row">
+            <div class="col-md-2">
+                <asp:Label ID="Label_Attribute2" runat="server" Text="">Röd</asp:Label>
+            </div>
+            <div class="col-md-2">
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute2" runat="server" Text="Remove" />
+            </div>
         </div>
-        <div class="col-md-2">
-            <asp:Button Cssclass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute3" runat="server" Text="Remove" /><br />
+        <%-- Egenskap3 --%>
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Egenskap tre</h4>
+            </div>
         </div>
-    </div>
 
-    <%-- Save button --%>
-    <div class="row">
-        <div class="col-md-4">
-            <asp:Button Cssclass="btn btn-default" Csstype="button" ID="Button_Save" runat="server" Text="Spara" />
+        <div class="row">
+            <div class="col-md-2">
+                <asp:Label ID="Label_Attribute3" runat="server" Text="">Tröja</asp:Label>
+            </div>
+            <div class="col-md-2">
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_RemoveAttribute3" runat="server" Text="Remove" /><br />
+            </div>
         </div>
-    </div>
+
+        <%-- Save button --%>
+        <div class="row">
+            <div class="col-md-4">
+                <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_Save" runat="server" Text="Spara" />
+            </div>
+        </div>
     </div>
 </asp:Content>
