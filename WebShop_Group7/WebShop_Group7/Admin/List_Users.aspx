@@ -5,7 +5,9 @@
       
      
      <asp:TextBox ID="TextBox_Search" runat="server"></asp:TextBox>
-     <asp:Button ID="Button_Search" runat="server" Text="Search" />
+     <asp:Button ID="Button_Search" runat="server" Text="Sök" />
      <asp:DataList ID="DataList_Users" runat="server">
      </asp:DataList>
+     <asp:Button ID="Button_Add" runat="server" Text="Lägg till" />
+
 </asp:Content>
