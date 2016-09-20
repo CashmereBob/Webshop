@@ -2,13 +2,18 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
+        <h2><%: Title %>.</h2>
         <div class="jumbotron">
-            <h2><%: Title %>.</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Produktnamn:</h4>
+                </div>
 
+            </div>
             <div class="row">
                 <%-- IMG --%>
                 <div class="col-md-3">
-                    <asp:Image Cssclass="img-responsive img-rounded" ID="Image_Product" imageurl="../Pictures/KlädPlagg.jpg" runat="server" />
+                    <asp:Image CssClass="img-responsive img-rounded" ID="Image_Product" ImageUrl="http://lundgren84.com/KlädPlagg.jpg" runat="server" />
                 </div>
             </div>
             <div class="row">
