@@ -8,6 +8,7 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="../Scripts/jquery-1.10.2.js"></script>
     <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/JavaScript.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
