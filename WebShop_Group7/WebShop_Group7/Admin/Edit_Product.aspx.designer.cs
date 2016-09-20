@@ -121,15 +121,6 @@ namespace WebShop_Group7.Admin {
         protected global::System.Web.UI.WebControls.TextBox TextBox_Category;
         
         /// <summary>
-        /// Button_AddAttribute control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button_AddAttribute;
-        
-        /// <summary>
         /// TextBox_AttributeCategory control.
         /// </summary>
         /// <remarks>
@@ -148,6 +139,15 @@ namespace WebShop_Group7.Admin {
         protected global::System.Web.UI.WebControls.DropDownList DropDownList_Atribute;
         
         /// <summary>
+        /// Button_AddAttribute control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_AddAttribute;
+        
+        /// <summary>
         /// Label_Attribute1 control.
         /// </summary>
         /// <remarks>
@@ -155,6 +155,15 @@ namespace WebShop_Group7.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Attribute1;
+        
+        /// <summary>
+        /// Button_RemoveAttribute1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_RemoveAttribute1;
         
         /// <summary>
         /// Label_Attribute2 control.
@@ -166,6 +175,15 @@ namespace WebShop_Group7.Admin {
         protected global::System.Web.UI.WebControls.Label Label_Attribute2;
         
         /// <summary>
+        /// Button_RemoveAttribute2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_RemoveAttribute2;
+        
+        /// <summary>
         /// Label_Attribute3 control.
         /// </summary>
         /// <remarks>
@@ -173,6 +191,15 @@ namespace WebShop_Group7.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_Attribute3;
+        
+        /// <summary>
+        /// Button_RemoveAttribute3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_RemoveAttribute3;
         
         /// <summary>
         /// Button_Save control.
