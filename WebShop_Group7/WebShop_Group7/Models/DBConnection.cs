@@ -9,7 +9,7 @@ namespace WebShop_Group7.Models
     public class DBConnection
     {
         private SqlConnection _connection = new SqlConnection();
-        private string _connectionString = @"Data Source=Local;User ID=Magnus; Password=12345678;Integrated Security = false";
+        private string _connectionString = @"Data Source=Local;Initial Catalog= User ID=Magnus; Password=12345678;Integrated Security = false";
 
         public DBConnection()
         {
