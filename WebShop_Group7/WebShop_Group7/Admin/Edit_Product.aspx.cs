@@ -28,7 +28,6 @@ namespace WebShop_Group7.Admin
         protected void Button_NewProductIMG_Click(object sender, EventArgs e)
         {
             if (!FileUpload1.HasFile)
-
             {
                 Label_ImgUpload.ForeColor = System.Drawing.Color.Red;
                 Label_ImgUpload.Text = "Please Select Image File";
@@ -38,7 +37,6 @@ namespace WebShop_Group7.Admin
             {
                 Label_ImgUpload.ForeColor = System.Drawing.Color.Green;
                 Label_ImgUpload.Text = "Image Uploaded Sucessfully";
-                            
                 UploadProfileImage("", @"/cerwus.se / public_html / Grupp7", "");
             }
         }
