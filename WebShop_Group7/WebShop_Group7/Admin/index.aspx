@@ -45,7 +45,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="Button1" runat="server" Text="Login" Width="116px" OnClick="Button1_Click" />                           
+                            <asp:Button ID="Button1" runat="server" Text="Login" Width="116px" OnClientClick="Login()" />                           
                         </td>
                     </tr>
                 </table>
