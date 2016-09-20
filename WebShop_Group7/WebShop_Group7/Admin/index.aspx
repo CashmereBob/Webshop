@@ -8,7 +8,6 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="../Scripts/jquery-1.10.2.js"></script>
     <script src="../Scripts/bootstrap.js"></script>
-    <script src="../Scripts/JavaScript.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -46,7 +45,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button ID="Button1" runat="server" Text="Login" Width="116px" OnClientClick="Login()" />                           
+                            <asp:Button ID="Button_Login" runat="server" Text="Login" Width="116px" OnClick="Login" />                           
                         </td>
                     </tr>
                 </table>
