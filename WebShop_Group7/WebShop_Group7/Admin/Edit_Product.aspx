@@ -7,34 +7,23 @@
 
             <div class="row">
                 <%-- IMG --%>
-                <div class="col-md-6">
-                    <%--<link rel="canonical" href="/sv/mode-kvinna-kl%C3%A4der-kvinnliga-1623086/">--%>
-                    <%--<asp:Image src="images/Photo1.jpg" alt="Sample Photo" CssClass="img-responsive img-rounded"" ID="Image1" runat="server" />--%>
-                    <img id="Image_Product" src="/sv/mode-kvinna-kl%C3%A4der-kvinnliga-1623086/" class="img-responsive img-rounded" alt="Sample Photo" />
-
+                <div class="col-md-3">
+                    <asp:Image Cssclass="img-responsive img-rounded" ID="Image_Product" imageurl="../Pictures/KlädPlagg.jpg" runat="server" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="URL...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Browse...</button>
-                        </span>
-                    </div>
-                </div>
-                <!-- /input-group -->
-
-                <!-- /.col-lg-6 -->
-                <%--    <div class="col-md-5">                 
-                        <asp:Label ID="Label_ImgURL" runat="server" Text="Label">URL:</asp:Label>                  
-                        <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server"></asp:TextBox>                 
-                         <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button1" runat="server" Text="Browse..." />                 
-                </div>--%>
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_NewProductIMG" runat="server" Text="Upload" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_NewProductIMG" runat="server" Text="Upload" OnClick="Button_NewProductIMG_Click" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <asp:Label ID="Label_ImgUpload" runat="server" ForeColor="#CC0000"></asp:Label>
                 </div>
             </div>
             <div class="row">
