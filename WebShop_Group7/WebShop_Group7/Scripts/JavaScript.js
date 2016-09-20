@@ -4,8 +4,6 @@
 }
 
 function Login() {
-    sessionStorage.setItem('User', $('TextBox_AdminUserName:textbox').val());
-    sessionStorage.setItem('Password', $('TextBox_AdminPassword:textbox').val());
-    
-
+    sessionStorage.setItem('User', $('#TextBox_AdminUserName').val());
+    sessionStorage.setItem('Password', $('#TextBox_AdminPassword').val());
 }
