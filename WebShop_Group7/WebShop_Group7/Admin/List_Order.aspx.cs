@@ -10,18 +10,9 @@ namespace WebShop_Group7.Admin
 {
     public partial class List_Order : System.Web.UI.Page
     {
-        public void ValidUser(string foo)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            var db = new DBConnection();
-            var users = new UserService();
-            Label1.Text = db.ConnectionStatus();
-
-            HiddenField usrContole = (HiddenField)Master.FindControl("Usern");
-            HiddenField pasControle = (HiddenField)Master.FindControl("Password");
-
-            var usr = usrContole.Value;
-            var pas = pasControle.Value;
-            if (!users.ValidateLogin(usr, pas))
+            if ((string)Session["New"] != "Admin")
             {
                 Response.Redirect("~/Admin/index.aspx");
             }

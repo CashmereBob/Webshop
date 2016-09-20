@@ -25,43 +25,6 @@ namespace WebShop_Group7.Models
             return Convert.ToBase64String(hash); //Konverterar hashen till en string och returnerar.
         }
 
-        public bool ValidateLogin(string usr, string pass)
-        {
-            var salt = string.Empty;
-            var password = string.Empty;
-
-            DBConnection db = new DBConnection();
-
-            try { 
-            db.OpenConnection();
-            string sql1 = $"Select * From tbl_User Where Email = {usr}";
-            SqlCommand myCommand = new SqlCommand(sql1, db._connection);
-
-            using (SqlDataReader myDataReader = myCommand.ExecuteReader())
-            {
-                while (myDataReader.Read())
-                {
-                    salt = myDataReader["Salt"].ToString();
-                    password = myDataReader["Password"].ToString();
-                }
-            }
-            myCommand.ExecuteNonQuery();
-            } catch
-            {
-
-            } finally
-            {
-                db.CloseConnection();
-   
-            }
-            if (GenerateSHA256Hash(pass, salt) == password)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+       
     }
 }
