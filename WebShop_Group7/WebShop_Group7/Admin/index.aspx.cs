@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebShop_Group7.Models;
 
 namespace WebShop_Group7.Admin
 {
@@ -14,14 +15,16 @@ namespace WebShop_Group7.Admin
 
         }
 
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        protected void Login(object sender, EventArgs e)
         {
+            
+            var Login = new UserService();
+            string salt = Login.CreateSalt(10);
 
-        }
+            string HashedPassed = Login.GenerateSHA256Hash(TextBox_AdminPassword.Text, salt);
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Admin/List_Order.aspx");
+
+            Response.Redirect($"~/Admin/List_Order.aspx?Username={TextBox_AdminUserName.Text}&Password={HashedPassed}");
         }
     }
 }
