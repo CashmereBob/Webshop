@@ -12,7 +12,7 @@ namespace WebShop_Group7.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Login(object sender, EventArgs e)

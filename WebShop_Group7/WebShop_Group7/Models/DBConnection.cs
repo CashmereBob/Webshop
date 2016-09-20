@@ -8,42 +8,12 @@ namespace WebShop_Group7.Models
 {
     public class DBConnection
     {
-        private SqlConnection _connection = new SqlConnection();
-        private string _connectionString = @"Data Source=Local;Initial Catalog= User ID=Magnus; Password=12345678;Integrated Security = false";
+        public SqlConnection _connection = new SqlConnection();
+        private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Magnus; password = 12345678; integrated Security = true";
 
         public DBConnection()
         {
-            try
-            {
-                OpenConnection();
-
-                var admin = new List<int>();
-
-                string sql = "Select ID From tbl_Users";
-                SqlCommand myCommand = new SqlCommand(sql, _connection);
-
-                using (SqlDataReader myDataReader = myCommand.ExecuteReader())
-                {
-                    while (myDataReader.Read())
-                    {
-                        admin.Add(int.Parse(myDataReader["ID"].ToString()));
-                    }
-                }
-
-                if (admin.Count() < 1)
-                {
-                    AddAdmin();
-                }
-
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                CloseConnection();
-            }
+            AddAdmin();
         }
 
         public void OpenConnection()
@@ -59,14 +29,62 @@ namespace WebShop_Group7.Models
 
         public void AddAdmin()
         {
-            var user = new UserService();
+            var admin = new List<int>();
+            try
+            {
+                OpenConnection();
+                string sql1 = "Select * From tbl_User";
+                SqlCommand myCommand = new SqlCommand(sql1, _connection);
 
-            var salt = user.CreateSalt(10);
-            var password = user.GenerateSHA256Hash("password", salt);
+                using (SqlDataReader myDataReader = myCommand.ExecuteReader())
+                {
+                    while (myDataReader.Read())
+                    {
+                        admin.Add(int.Parse(myDataReader["ID"].ToString()));
+                    }
+                }
+                myCommand.ExecuteNonQuery();
+            }
+            catch
+            {
 
-            string sql = $"Insert Into tbl_Users (Firstname, Lastname, Adress, Postalcode, City, Email, Telephone, Mobilephone, Password, Salt, Pricegroup, Company, Admin) " + 
-                $"Values('Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '{password}', '{salt}', '1', 'Admin', '1' )";
-            SqlCommand myCommand = new SqlCommand(sql, _connection);
+            }
+            finally
+            {
+
+                CloseConnection();
+            }
+
+            if (admin.Count() < 1) { 
+            try
+            {
+                OpenConnection();
+                var user = new UserService();
+
+                var salt = user.CreateSalt(10);
+                var password = user.GenerateSHA256Hash("password", salt);
+
+                string sql = $"Insert Into tbl_User (Firstname, Lastname, Adress, Postalcode, City, Email, Telephone, Mobilephone, Password, Salt, Pricegroup, Company, Admin) Values('Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '{password}', '{salt}', '1', 'Admin', '1' )";
+
+                SqlCommand insertCmd = new SqlCommand(sql, _connection);
+                insertCmd.ExecuteNonQuery();
+            }
+            catch { }
+            finally
+            {
+                CloseConnection();
+            }
+            }
+        }
+
+        public string ConnectionStatus()
+        {
+            
+            OpenConnection();
+            var databas = _connection.DataSource;
+            
+            CloseConnection();
+            return databas;
         }
     }
 }

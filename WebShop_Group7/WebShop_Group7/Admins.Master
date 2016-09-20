@@ -14,14 +14,19 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/JavaScript.js"></script>
 </head>
-<body>
-    <form runat="server">   
-        <%-- Gömda fält för att lagra informationen i local och session storrage, detta för att C# ska kunna få tillgång till värdena vilket det inte kan om det ligger direkt i Session eller local storrage --%>
-        <input id="User" type="hidden" value="." name="usr" runat="server"> 
-        <input id="Password" type="hidden" value="." name="password" runat="server">
-        <input id="Cart" type="hidden" value="." name="cart" runat="server">
-
+<body>   
+   <form id="MainForm" runat="server">     
+         <%-- Gömda fält för att lagra informationen i local och session storrage, detta för att C# ska kunna få tillgång till värdena vilket det inte kan om det ligger direkt i Session eller local storrage --%>
+     <asp:HiddenField id="Usern" value="" runat="server"/> 
+    <script>$('#Usern').val(sessionStorage.getItem('User'));</script>
+     <asp:HiddenField id="Password" value="" runat="server"/>
+       <script>$('#Password').val(sessionStorage.getItem('Password'));</script>
+     <asp:HiddenField id="Cart" value="" runat="server"/>
+    
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -42,7 +47,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
+        
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -91,6 +96,5 @@
     </form>
 
 </body>
-<script src="../Scripts/JavaScript.js"></script>
 </html>
 
