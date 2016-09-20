@@ -204,7 +204,7 @@
             <%-- Save button --%>
             <div class="row">
                 <div class="col-md-4">
-                    <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_Save" runat="server" Text="Spara" />
+                    <asp:Button CssClass="btn btn-default" Csstype="button" ID="Button_Save" runat="server" Text="Spara" OnClick="Button_Save_Click" />
                 </div>
             </div>
         </div>
