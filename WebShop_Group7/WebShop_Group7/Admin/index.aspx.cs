@@ -24,7 +24,7 @@ namespace WebShop_Group7.Admin
             string HashedPassed = Login.GenerateSHA256Hash(TextBox_AdminPassword.Text, salt);
 
 
-            Response.Redirect($"~/Admin/List_Order.aspx?Username={TextBox_AdminUserName.Text}&Password={HashedPassed}");
+            Response.Redirect($"~/login.aspx?Username={TextBox_AdminUserName.Text}&Password={HashedPassed}");
         }
     }
 }
