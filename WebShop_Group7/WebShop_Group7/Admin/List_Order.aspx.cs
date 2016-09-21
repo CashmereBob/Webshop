@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,6 +11,7 @@ namespace WebShop_Group7.Admin
 {
     public partial class List_Order : System.Web.UI.Page
     {
+        Order ord = new Order();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["Admin"] == null) //Kontrollerar om det finns en Admin session.
@@ -18,19 +20,23 @@ namespace WebShop_Group7.Admin
             }
 
 
+            DataTable dt = ord.ListAllOrders();
+            ViewState["dt"] = dt;
+            this.BindGrid();
+
+        }
+
+        protected void BindGrid()
+        {
+            GridView_Order.DataSource = ViewState["dt"] as DataTable;
+            GridView_Order.DataBind();
         }
 
         protected void Button_Search_Click(object sender, EventArgs e)
         {
-            HiddenField usr = (HiddenField)Master.FindControl("Usern");
-            HiddenField pas = (HiddenField)Master.FindControl("Password");
-            var us = usr.Value;
-            var ps = pas.Value;
 
-            Console.WriteLine(us + ps);
-            
         }
 
-        
+
     }
 }
