@@ -31,15 +31,6 @@ namespace WebShop_Group7.Admin {
         protected global::System.Web.UI.WebControls.Button Button_Search;
         
         /// <summary>
-        /// DataList_Users control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList_Users;
-        
-        /// <summary>
         /// Button_Add control.
         /// </summary>
         /// <remarks>
@@ -47,5 +38,14 @@ namespace WebShop_Group7.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button_Add;
+        
+        /// <summary>
+        /// GridviewUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridviewUser;
     }
 }
