@@ -8,14 +8,29 @@
                     <h2><%: Title %>.</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <asp:TextBox ID="TextBox_Search" runat="server"></asp:TextBox>
+          
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                    <!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                        <asp:Button ID="Button1" Cssclass="btn btn-default" runat="server" Text="Add Product" />
+                    </div>
+                    <!-- /.col-lg-6 -->
                 </div>
-                <div class="col-md-3">
-                    <asp:Button ID="Button_Search" runat="server" Text="Search" />
-                </div>
-            </div>
+                <!-- /.row -->
+           
+
+
+
             <div class="row">
                 <div class="col-md-12">
                 </div>
