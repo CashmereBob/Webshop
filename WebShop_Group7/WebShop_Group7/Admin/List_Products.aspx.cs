@@ -12,14 +12,27 @@ namespace WebShop_Group7.Admin
 
     public partial class List_Products : System.Web.UI.Page
     {
-
+      
         Produkts products;
         string query;
         protected void Page_Load(object sender, EventArgs e)
         {
             products = new Produkts();
             query = @"SELECT * FROM tbl_Product";
-            //categoriesGrid.DataSource = products.GetAllToDataTable(query);
+            GridView1.DataSource = products.GetAllToDataTable(query);
+         
         }
+
+        public void GetCategories()
+        {
+            GridView1.DataSource = products.GetAllToDataTable(query);
+
+        }
+
+
+
+
+
     }
+
 }
