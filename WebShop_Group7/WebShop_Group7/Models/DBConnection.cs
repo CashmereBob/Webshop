@@ -9,12 +9,8 @@ namespace WebShop_Group7.Models
     public class DBConnection
     {
         public SqlConnection _connection = new SqlConnection();
-        //Magnus
         //private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Magnus; password = 12345678; integrated Security = true";
-        //Sture
-        //private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Thuren; password = dog; integrated Security = true";
-        //Hampus
-        private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Olle; password = Olle; integrated Security = true";
+        private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Thuren; password = dog; integrated Security = true";
 
 
         public DBConnection()
@@ -61,39 +57,36 @@ namespace WebShop_Group7.Models
                 CloseConnection();
             }
 
-            if (admin.Count() < 1)
+            if (admin.Count() < 1) { 
+            try
             {
-                try
-                {
-                    OpenConnection();
-                    var user = new UserService();
+                OpenConnection();
+                var user = new UserService();
 
-                    var salt = user.CreateSalt(10);
-                    var password = user.GenerateSHA256Hash("password", salt);
+                var salt = user.CreateSalt(10);
+                var password = user.GenerateSHA256Hash("password", salt);
 
-                    string sql = $"Insert Into tbl_User (Firstname, Lastname, Adress, Postalcode, City, Email, Telephone, Mobilephone, Password, Salt, Pricegroup, Company, Admin) Values('Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '{password}', '{salt}', '1', 'Admin', '1' )";
+                string sql = $"Insert Into tbl_User (Firstname, Lastname, Adress, Postalcode, City, Email, Telephone, Mobilephone, Password, Salt, Pricegroup, Company, Admin) Values('Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', 'Admin', '{password}', '{salt}', '1', 'Admin', '1' )";
 
-                    SqlCommand insertCmd = new SqlCommand(sql, _connection);
-                    insertCmd.ExecuteNonQuery();
-                }
-                catch {  }
-                finally
-                {
-                    CloseConnection();
-                }
+                SqlCommand insertCmd = new SqlCommand(sql, _connection);
+                insertCmd.ExecuteNonQuery();
+            }
+            catch { }
+            finally
+            {
+                CloseConnection();
+            }
             }
         }
 
         public string ConnectionStatus()
         {
-
+            
             OpenConnection();
             var databas = _connection.DataSource;
-
+            
             CloseConnection();
             return databas;
         }
-    
-      
     }
 }

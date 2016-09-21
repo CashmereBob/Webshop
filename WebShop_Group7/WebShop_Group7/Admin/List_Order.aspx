@@ -10,7 +10,22 @@
      
      <asp:TextBox ID="TextBox_Search" runat="server"></asp:TextBox>
      <asp:Button ID="Button_Search" runat="server" Text="Search" OnClick="Button_Search_Click" />
-     <asp:DataList ID="DataList_Orders" runat="server">
-     </asp:DataList>
+      
+    <asp:GridView ID="GridView_Order" runat="server" AutoGenerateColumns="false"
+
+    AllowSorting="true" AllowPaging="true" PageSize="5">
+
+    <Columns>
+
+        <asp:BoundField DataField="ID" HeaderText="Order NR" SortExpression="ID" />
+
+        <asp:BoundField DataField="UserID" HeaderText="UserID" SortExpression="Förnamn" />
+
+
+
+
+    </Columns>
+
+</asp:GridView>
 
 </asp:Content>
