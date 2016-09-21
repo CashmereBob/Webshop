@@ -16,54 +16,56 @@ namespace WebShop_Group7.Admin
             
         }
 
-        protected void Login(object sender, EventArgs e)
+        protected void Login(object sender, EventArgs e) //Metod som validerar inloggning och skapar session
         {
-            var usr = TextBox_AdminUserName.Text;
-            var pass = TextBox_AdminPassword.Text;
-
-
-            var Login = new UserService();
-            string salt = string.Empty;
+            var usrInput = TextBox_AdminUserName.Text; //Plockar in användarnamnet från textbox
+            var passInput = TextBox_AdminPassword.Text; //Plockar in lösenordet från textbox
             
-            var password = string.Empty;
-            bool isAdmin = false;
 
-            DBConnection db = new DBConnection();
+            //Tomma variabler som ska innehålla värden hämtade från databasen (Om användarnamnet är registrerat)
+            string saltFromDb = string.Empty;
+            string passwordFromDb = string.Empty;
+            bool isAdminFromDb = false;
 
+            DBConnection db = new DBConnection(); //Initierar en DBConnection class för att kunna koppla upp mot databasen
+
+            //Try catch där vi försöker läsa värden från databasen.
             try
             {
-                db.OpenConnection();
-                string sql1 = $"Select * From tbl_User Where Email = '{usr}'";
-                SqlCommand myCommand = new SqlCommand(sql1, db._connection);
+                db.OpenConnection(); // Öppnar databasen
+                string sql1 = $"Select * From tbl_User Where Email = '{usrInput}'"; //Skapar en variabel innehållandes vår query, Denna queryn väljer alla kolumner från table tbl_User där kolumnen Email är samma som det inmatade användarnamnet.
+                SqlCommand myCommand = new SqlCommand(sql1, db._connection); //Skapar upp vårt kommando med vår conenctionstring och vår query.
 
-                using (SqlDataReader myDataReader = myCommand.ExecuteReader())
+                using (SqlDataReader myDataReader = myCommand.ExecuteReader()) //Tar emot svaret från databasen.
                 {
-                    while (myDataReader.Read())
+                    while (myDataReader.Read()) //Loopar igenom alla träffar
                     {
-                        salt = myDataReader["Salt"].ToString();
-                        password = myDataReader["Password"].ToString();
-                        isAdmin = (bool)myDataReader["Admin"];
+                        saltFromDb = myDataReader["Salt"].ToString(); //Lägger användarens Salt i SaltFromDb variabeln
+                        passwordFromDb = myDataReader["Password"].ToString(); //Lägger användarens Password i passwordFromDb variabeln
+                        isAdminFromDb = (bool)myDataReader["Admin"]; //Lägger in boolvärdet från användarens Admin status i isAdminFromDb variabeln,
                     }
                 }
-                myCommand.ExecuteNonQuery();
+                myCommand.ExecuteNonQuery(); //Executar vårt command.
             }
             catch
             {
-
+                //TODO - Fixa exeption
             }
             finally
             {
-                db.CloseConnection();
+                db.CloseConnection(); //Stänger alltid connection oavsett vad som händer i try catch.
 
             }
-            if (Login.GenerateSHA256Hash(pass, salt) == password && isAdmin)
+
+            var Login = new UserService(); //Skapar upp en instance av UserService för att validera insamlade uppgifter.
+            if (Login.GenerateSHA256Hash(passInput, saltFromDb) == passwordFromDb && isAdminFromDb) //Kontrollerar om det inmatade lösenordet tillsammans med det lagrade saltet blir samma som det lagrade lösenordet samt kollar om användaren har adminrättigheter.
             {
-                Session["new"] = "Admin";
-                Response.Redirect("List_Order.aspx");
+                Session["new"] = "Admin"; //Skapar en Admin session
+                Response.Redirect("List_Order.aspx"); //Skickar vidare till Admin Startsida.
             }
             else
             {
-                
+                //TODO - Medela att lösenordet eller användarnamnet  var fel
             }
         }
 
