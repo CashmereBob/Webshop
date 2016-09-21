@@ -11,6 +11,7 @@ namespace WebShop_Group7.Models
         public SqlConnection _connection = new SqlConnection();
         //private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Magnus; password = 12345678; integrated Security = true";
         //private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Thuren; password = dog; integrated Security = true";
+        //private string _connectionString = @"Data Source = (local); Network Library = DBMSSOCN; Initial Catalog = WebShopGr7; User ID =Olle; password = Olle; integrated Security = true";
 
 
         public DBConnection()
