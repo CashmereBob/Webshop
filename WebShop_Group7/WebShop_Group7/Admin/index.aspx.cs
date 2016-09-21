@@ -60,7 +60,7 @@ namespace WebShop_Group7.Admin
             var Login = new UserService(); //Skapar upp en instance av UserService för att validera insamlade uppgifter.
             if (Login.GenerateSHA256Hash(passInput, saltFromDb) == passwordFromDb && isAdminFromDb) //Kontrollerar om det inmatade lösenordet tillsammans med det lagrade saltet blir samma som det lagrade lösenordet samt kollar om användaren har adminrättigheter.
             {
-                Session["new"] = "Admin"; //Skapar en Admin session
+                Session["Admin"] = usrInput; //Skapar en Admin session
                 Response.Redirect("List_Order.aspx"); //Skickar vidare till Admin Startsida.
             }
             else

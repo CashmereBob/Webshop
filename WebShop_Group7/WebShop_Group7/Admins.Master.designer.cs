@@ -13,13 +13,22 @@ namespace WebShop_Group7 {
     public partial class Admins {
         
         /// <summary>
-        /// User control.
+        /// MainForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden User;
+        protected global::System.Web.UI.HtmlControls.HtmlForm MainForm;
+        
+        /// <summary>
+        /// Usern control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField Usern;
         
         /// <summary>
         /// Password control.
@@ -28,7 +37,7 @@ namespace WebShop_Group7 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden Password;
+        protected global::System.Web.UI.WebControls.HiddenField Password;
         
         /// <summary>
         /// Cart control.
@@ -37,7 +46,7 @@ namespace WebShop_Group7 {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden Cart;
+        protected global::System.Web.UI.WebControls.HiddenField Cart;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

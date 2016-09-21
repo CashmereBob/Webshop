@@ -12,7 +12,7 @@ namespace WebShop_Group7.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["New"] != "Admin") //Kontrollerar om det finns en Admin session.
+            if (!["Admin"]) //Kontrollerar om det finns en Admin session.
             {
                 Response.Redirect("~/Admin/index.aspx"); //Om inte gå tillbaka till inloggning.
             }
