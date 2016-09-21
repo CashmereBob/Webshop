@@ -354,6 +354,7 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\DBConnection.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Produkts.cs" />
     <Compile Include="Models\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
