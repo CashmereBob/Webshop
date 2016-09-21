@@ -45,7 +45,7 @@ namespace WebShop_Group7.Admin
                         isAdminFromDb = (bool)myDataReader["Admin"]; //Lägger in boolvärdet från användarens Admin status i isAdminFromDb variabeln,
                     }
                 }
-                myCommand.ExecuteNonQuery(); //Executar vårt command.
+                //myCommand.ExecuteNonQuery(); //Executar vårt command.
             }
             catch
             {
