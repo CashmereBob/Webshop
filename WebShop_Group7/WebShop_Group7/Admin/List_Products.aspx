@@ -9,4 +9,5 @@
      <asp:DataList ID="DataList_Products" runat="server">
      </asp:DataList>
 
+     <asp:GridView ID="GridView_Produkts" runat="server"></asp:GridView>
 </asp:Content>
