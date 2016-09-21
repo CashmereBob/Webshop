@@ -10,20 +10,30 @@ namespace WebShop_Group7.Models
 {
     public class Produkts
     {
+       DBConnection connection = new DBConnection();
+        SqlDataReader dataReader;
+
         public DataTable GetAllToDataTable(string query)
         {
-            string sql;
-
-            sql = query;
-
+            try { 
+            connection.OpenConnection();                                   
             DataTable dataTable = new DataTable();
-            using (SqlCommand command = new SqlCommand(sql, connection))
+            using (SqlCommand command = new SqlCommand(query, connection._connection))
             {
-                SqlDataReader dataReader = command.ExecuteReader();
-                dataTable.Load(dataReader);
+                dataReader = command.ExecuteReader();
+                dataTable.Load(dataReader);        
+            }
+           
+            return dataTable;
+            }
+            catch { }
+            finally
+            {
+                connection.CloseConnection();
                 dataReader.Close();
             }
-            return dataTable;
+
+            return null;
         }
     }
 }

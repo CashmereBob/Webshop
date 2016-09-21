@@ -76,7 +76,7 @@ namespace WebShop_Group7.Models
                     SqlCommand insertCmd = new SqlCommand(sql, _connection);
                     insertCmd.ExecuteNonQuery();
                 }
-                catch { }
+                catch {  }
                 finally
                 {
                     CloseConnection();
@@ -93,5 +93,7 @@ namespace WebShop_Group7.Models
             CloseConnection();
             return databas;
         }
+    
+      
     }
 }

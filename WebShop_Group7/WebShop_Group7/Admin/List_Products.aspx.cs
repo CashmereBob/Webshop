@@ -6,24 +6,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebShop_Group7.Models;
-using WebShop_Group7.Models;
 
-namespace WebShop_Group7
+namespace WebShop_Group7.Admin
 {
-  
+
     public partial class List_Products : System.Web.UI.Page
     {
-        DBConnection connection;
+
         Produkts products;
-        string sql;
+        string query;
         protected void Page_Load(object sender, EventArgs e)
         {
-            connection = new DBConnection();
             products = new Produkts();
-            sql = $@"SELECT * FROM tbl_Product";
-            products.GetAllToDataTable(sql);
-            connection.CloseConnection();
-          
+            query = @"SELECT * FROM tbl_Product";
+            //categoriesGrid.DataSource = products.GetAllToDataTable(query);
         }
     }
 }
